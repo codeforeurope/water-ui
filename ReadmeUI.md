@@ -1,16 +1,23 @@
-# To integrate ui whilst using https://github.com/codeforireland2/swagger-mongoose-react-firebase as base you Override main project by 
+
+https://github.com/codeforireland2/swagger-mongoose-react-firebase as base
+
+# UI seperation 
 
 ```shell
+git clone https://github.com/codeforireland2/swagger-mongoose-react-firebase
+cd swagger-mongoose-react-firebase
+yarn # if first time install possible global install needed
+
 git pull https://github.com/codeforeurope/water-ui
-``` 
-
-# or in main project if water-ui is in parent directory
-
-```shell
-mv src src.old
-cp -r ../water-ui/src src
-```
-
-
+git pull https://github.com/codeforeurope/water-api
+git pull https://github.com/codeforeurope/water-data
 
 npm start 
+
+npm run build-storybook
+
+npm run storybook
+``` 
+
+## TODO rename readme.md
+

@@ -12,25 +12,26 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<!--title>{{{title}}</title-->
-<meta name="description" content="{{{description}}}" />
-
+<!--title>{{{title}}}</title-->
+<meta name="description" content="{{{description}}}" /> 
+<script async defer src="//maps.googleapis.com/maps/api/js?key={{{ apikey }}}&libraries=places"></script>
+ <!--script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"
+  type="text/javascript"></script-->
 </head>
 <body class="bg-gradient">
   <div id="react-root">{{{ reactString }}}</div>  
 	<div class="container">
 		<div class="pull-right hidden-xs">
-      <h1 style="display:none"><small>{{app.city}}</small></h1>
+      <h1 style="display:none"><small>{{{app.city}}}</small></h1>
 		</div>
-    <h1 style="display:none">{{gettext "Was steckt in meinem Leitungswasser?"}}</h1>
+    <h1 style="display:none">{{{ gettext "Was steckt in meinem Leitungswasser?"}}}</h1>
 
-    <div class="welcome-text">{{ gettext "Diese Webseite erlaubt eine einfache Übersicht der Trinkwasserwerte für Münster. Es ist außerdem ein Vergleich mit Mineralwässern möglich. Die Daten und einige der Texte hierfür stammen von den Seiten der Stadtwerke Münster. Zum starten einfach eines der untenstehenden Wasserwerke auswählen." }}</div>
+    <div class="welcome-text">{{{ gettext "Diese Webseite erlaubt eine einfache Übersicht der Trinkwasserwerte für Münster. Es ist außerdem ein Vergleich mit Mineralwässern möglich. Die Daten und einige der Texte hierfür stammen von den Seiten der Stadtwerke Münster. Zum starten einfach eines der untenstehenden Wasserwerke auswählen." }}}</div>
 
 		<div class="choose-location">
 			<ul class="nav nav-tabs responsive" id="city-tabs">
         {{{#each locations}}}
-        <li class="nav-li-main"><a data-toggle="city-tab" data-attribute="{{id}}">{{name}}</a></li>
+        <li class="nav-li-main"><a data-toggle="city-tab" data-attribute="{{{id}}}">{{{name}}}</a></li>
         {{{/each}}}
 			</ul>
 		</div>
@@ -39,13 +40,13 @@
 
 			<ul class="nav nav-tabs responsive">
         {{{#each measures}}}
-          <li class="nav-li-main"><a data-toggle="tab" data-attribute="{{id}}">{{name}}</a></li>
+          <li class="nav-li-main"><a data-toggle="tab" data-attribute="{{{id}}}">{{{name}}}</a></li>
         {{{/each}}}
-        <li class="nav-li-main"><a data-toggle="tab" data-attribute="info"><span class="glyphicon glyphicon-info-sign"></span> {{ gettext "Fragen und Antworten" }}</a></li>
+        <li class="nav-li-main"><a data-toggle="tab" data-attribute="info"><span class="glyphicon glyphicon-info-sign"></span> {{{ gettext "Fragen und Antworten" }}}</a></li>
 			</ul>
 
 			<div class="alert alert-warning result-without-value" style="display:none;">
-        {{ gettext "Es liegen leider keine Werte für diesen Inhaltsstoff vor." }}
+        {{{ gettext "Es liegen leider keine Werte für diesen Inhaltsstoff vor." }}
 			</div>
 
 			<div class="result-with-value">
@@ -55,12 +56,12 @@
 							<div class="row gauge-glass-container" style="display:none;">
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
                   {{{#each measures}}}
-                    <div class="attribute-description attribute-description-{{id}}">
-                      {{> (lookup . 'id') }}
+                    <div class="attribute-description attribute-description-{{{id}}}">
+                      {{{> (lookup . 'id') }}}
                     </div>
                   {{{/each}}}
 									<br />
-                  <p><button type="button" class="btn btn-warning switch-to-section hidden-xs" data-section="compare"><span class="glyphicon glyphicon-chevron-right"></span> {{ gettext "Vergleich mit Mineralwasser" }}</button></p>
+                  <p><button type="button" class="btn btn-warning switch-to-section hidden-xs" data-section="compare"><span class="glyphicon glyphicon-chevron-right"></span> {{{ gettext "Vergleich mit Mineralwasser" }}}</button></p>
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-5">
 									<svg class="gauge-glass-img pull-right" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 186 837" preserveAspectRatio="xMinYMin meet">
@@ -113,10 +114,10 @@
 									</svg>
 
 									<ul class="gauge-description gauge-glass-description pull-right list-unstyled">
-                    <li class="highlight">{{ gettext "Wert" }}: <span class="gauge-value"></span> mg/l</li>
-                    <li>{{ gettext "Grenzwert" }}: <span class="gauge-legal-limit"></span></li>
-                    <li>{{ gettext "Durchschnitt" }}: <span class="gauge-average-value"></span> mg/l<br /><small>{{ gettext "(Münster, rote Linie)" }}</small></li>
-                    <li class="gauge-daily-dosis-container">{{ gettext "Tagesbedarf" }}: <span class="gauge-daily-dosis">~</span></li>
+                    <li class="highlight">{{{ gettext "Wert" }}}: <span class="gauge-value"></span> mg/l</li>
+                    <li>{{{ gettext "Grenzwert" }}}: <span class="gauge-legal-limit"></span></li>
+                    <li>{{{ gettext "Durchschnitt" }}: <span class="gauge-average-value"></span> mg/l<br /><small>{{{ gettext "(Münster, rote Linie)" }}}</small></li>
+                    <li class="gauge-daily-dosis-container">{{{ gettext "Tagesbedarf" }}}: <span class="gauge-daily-dosis">~</span></li>
 									</ul>
 								</div>
 							</div>
@@ -165,7 +166,7 @@
 							</div>
 
 							<p><br /></p>
-              <p><button type="button" class="btn btn-warning switch-to-section hidden-md hidden-lg hidden-sm" data-section="compare"><span class="glyphicon glyphicon-chevron-right"></span> {{ gettext "Vergleich mit Mineralwasser" }}</button></p>
+              <p><button type="button" class="btn btn-warning switch-to-section hidden-md hidden-lg hidden-sm" data-section="compare"><span class="glyphicon glyphicon-chevron-right"></span> {{{ gettext "Vergleich mit Mineralwasser" }}}</button></p>
 						</div>
 
 						<div class="section section-compare" style="display:none;margin-top:-32px;">
@@ -285,9 +286,9 @@
 							</div>
 							<p><br /></p>
 							<p><br /></p>
-              <p><button type="button" class="btn btn-warning switch-to-section" data-section="explanation"><span class="glyphicon glyphicon-chevron-left"></span> {{ gettext "Zurück" }}</button></p>
+              <p><button type="button" class="btn btn-warning switch-to-section" data-section="explanation"><span class="glyphicon glyphicon-chevron-left"></span> {{{ gettext "Zurück" }}}</button></p>
 							<p><br /></p>
-              <p><small>{{ gettext "Beispielhaft wurden zwei überregional bekannte Wasser sowie zwei Wasser aus dem Landkreis Heilbronn ausgewählt. Alle vier sind stille Mineralwasser." }}</small></p>
+              <p><small>{{{ gettext "Beispielhaft wurden zwei überregional bekannte Wasser sowie zwei Wasser aus dem Landkreis Heilbronn ausgewählt. Alle vier sind stille Mineralwasser." }}}</small></p>
 						</div>
 
 					</div>
@@ -299,16 +300,16 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-                <h4 class="panel-title">{{ gettext "Information zu" }}<span class="zone-id"></span></h4>
+                <h4 class="panel-title">{{{ gettext "Information zu" }}}<span class="zone-id"></span></h4>
 							</div>
 							<div class="panel-body">
 								<p class="zone-year-container">
-                {{ gettext "Die Daten stammen aus dem Jahr" }} <span class="zone-data-year"></span>
+                {{{ gettext "Die Daten stammen aus dem Jahr" }}} <span class="zone-data-year"></span>
 								</p>
 								<p>
                 {{{#each locations}}}
-                  <div id="zone-{{id}}" class="zone-descriptions zone-description-{{id}}">
-                    <span class="zone-description">{{> (lookup . 'id') }}</span>
+                  <div id="zone-{{{id}}}" class="zone-descriptions zone-description-{{{id}}}">
+                    <span class="zone-description">{{{> (lookup . 'id') }}}</span>
                   </div>
                 {{{/each}}}
 								</p>
@@ -319,19 +320,19 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> {{ gettext "Woher kommt unser Trinkwasser?" }} </a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> {{{ gettext "Woher kommt unser Trinkwasser?" }}} </a>
 									</h4>
 								</div>
 								<div id="collapseOne" class="panel-collapse collapse">
 									<div class="panel-body">
-                    {{> from }}
+                    {{{> from }}}
 									</div>
 								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> {{ gettext "Warum schmeckt mein Trinkwasser nicht so gut wie Mineralwasser? " }}</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> {{{ gettext "Warum schmeckt mein Trinkwasser nicht so gut wie Mineralwasser? " }}}</a>
 									</h4>
 								</div>
 								<div id="collapseThree" class="panel-collapse collapse">
@@ -434,13 +435,13 @@
 
 		<footer class="footer">
 			<a data-toggle="modal" data-target="#contactDialog"><span class="glyphicon glyphicon-envelope"></span></a>
-      <a data-toggle="modal" data-target="#contactDialog">{{ gettext "Kontakt" }}</a>
+      <a data-toggle="modal" data-target="#contactDialog">{{{ gettext "Kontakt" }}}</a>
 
 			<a data-toggle="modal" data-target="#attributionDialog"><span class="glyphicon glyphicon-user"></span></a>
-      <a data-toggle="modal" data-target="#attributionDialog">{{ gettext "Mitwirkende" }}</a>
+      <a data-toggle="modal" data-target="#attributionDialog">{{{ gettext "Mitwirkende" }}}</a>
 			|
 			<a data-toggle="modal" data-target="#imprintDialog"><span class="glyphicon glyphicon-info-sign"></span></a>
-      <a target="_blank" href="http://codefor.de/impressum/">{{ gettext "Impressum" }}</a>
+      <a target="_blank" href="http://codefor.de/impressum/">{{{ gettext "Impressum" }}}</a>
 		</footer>
 	</div>
 
