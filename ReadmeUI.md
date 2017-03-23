@@ -1,4 +1,4 @@
-# Override main project can do this by 
+# To integrate ui whilst using https://github.com/codeforireland2/swagger-mongoose-react-firebase as base you Override main project by 
 
 ```shell
 git pull https://github.com/codeforeurope/water-ui
@@ -10,3 +10,7 @@ git pull https://github.com/codeforeurope/water-ui
 mv src src.old
 cp -r ../water-ui/src src
 ```
+
+
+
+npm start 
