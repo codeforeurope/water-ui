@@ -26,6 +26,4 @@ You can reference issues in commits using:
 npm commit -m "I fixed codeforeurope/transparent-water#1"
 ```
 
-## TODO rename readme.md
-
 
