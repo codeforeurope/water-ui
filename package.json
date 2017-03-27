@@ -1,0 +1,22 @@
+{
+  "name": "water-ui",
+  "version": "1.0.0",
+  "description": "UI for Water Transparency Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeforeurope/water-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeforeurope/water-ui/issues"
+  },
+  "homepage": "https://github.com/codeforeurope/water-ui#readme",
+  "devDependencies": {
+    "react-cosmos-webpack": "^2.0.0-beta.10"
+  }
+}
