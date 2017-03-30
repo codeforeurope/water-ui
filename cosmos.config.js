@@ -1,7 +1,7 @@
 // cosmos.config.js
 module.exports = {
-  componentPaths: ['stories'],
+  componentPaths: ['src/components'],
   globalImports: [
-    './src/static/bootstrap-cyborg.css'
+    './src/static/css/bootstrap-cyborg.css'
   ]
 }

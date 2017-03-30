@@ -18,6 +18,11 @@ npm run build-storybook
 
 npm run storybook
 ``` 
+
+To Test all components in src/components
+```shell
+npm run cosmo
+```
 # Issues
 
 Please report any issues at the [Transparent-Water](https://github.com/codeforeurope/Transparent-Water/issues) repository.

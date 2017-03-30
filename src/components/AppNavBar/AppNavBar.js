@@ -1,23 +1,42 @@
 import React from 'react'
-import { Link } from 'react-router'
-
-import { Msg } from './messages'
+import {Link} from 'react-router'
+import {Navbar, Nav, MenuItem, NavItem, NavDropdown} from 'react-bootstrap'
+import {Msg} from './messages'
 import css from './AppNavBar.css'
 
 export default class AppNavBar extends React.Component {
-  static contextTypes = {
-    router: React.PropTypes.object.isRequired
-  }
-
   render () {
-    // this.props.routerProps
-    // this.context.router.push({ pathname: '/about', query: {}, state: null })
     return (
-      <nav className={`globalNav ${css.nav}`}>
-        <Link to="/home" activeClassName={css.navActive}><Msg s="navHome"/></Link>
-        <Link to="/about" activeClassName={css.navActive}><Msg s="navAbout"/></Link>
-        <Link to="/location" activeClassName={css.navActive}><Msg s="navLocation"/></Link>
-      </nav>
-    )
+      <Navbar inverse collapseOnSelect>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href='#'>Location</a>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#">Country</NavItem>
+            <NavItem eventKey={2} href="#">Link</NavItem>
+            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+              <MenuItem eventKey={3.1}>Action</MenuItem>
+              <MenuItem eventKey={3.2}>Another action</MenuItem>
+              <MenuItem eventKey={3.3}>Something else here</MenuItem>
+              <MenuItem divider />
+              <MenuItem eventKey={3.3}>Separated link</MenuItem>
+            </NavDropdown>
+          </Nav>
+          <Nav pullRight>
+            <Link to='/home' activeClassName={css.navActive}><Msg s='navHome' /></Link>
+            <Link to='/about' activeClassName={css.navActive}><Msg s='navAbout' /></Link>
+            <Link to='/location' activeClassName={css.navActive}><Msg s='navLocation' /></Link>
+            <NavItem eventKey={1} href='#'>Link Right</NavItem>
+            <NavItem eventKey={2} href='#'>Link Right</NavItem>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    );
   }
 }
+
+// ReactDOM.render(AppNavBar.navbarInstance, mountNode);

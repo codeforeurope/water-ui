@@ -40,7 +40,7 @@ class BlogPost extends React.Component {
 				font-family: sans-serif;
 				padding: 5px;
 				margin: 5px auto;
-				background: #eee;
+				background: #ccc;
 			}
 		`)
   }

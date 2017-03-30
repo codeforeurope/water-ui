@@ -1,5 +1,6 @@
 import BlogPost from './BlogPost/BlogPost'
 import AppNavBar from './AppNavBar/AppNavBar'
+import Country from './Country/index.js'
 
 /**
  * This is an index file for all components.
@@ -8,5 +9,6 @@ import AppNavBar from './AppNavBar/AppNavBar'
  */
 module.exports = {
   BlogPost,
-  AppNavBar
+  AppNavBar,
+  Country
 }
