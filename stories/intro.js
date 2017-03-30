@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 class intro extends React.Component {
-  render() {
+  render () {
     return <h1 style={{
-        display: 'none'
-      }}>Was steckt in meinem Leitungswasser?</h1>;
+      display: 'none'
+    }}>Was steckt in meinem Leitungswasser?</h1>
   }
 }
 
-export default intro;
+export default intro

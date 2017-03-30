@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 class testnoresult extends React.Component {
-  render() {
-    return <div className="alert alert-warning result-without-value" style={{}}>
+  render () {
+    return <div className='alert alert-warning result-without-value' style={{}}>
         Es liegen leider keine Werte für diesen Inhaltsstoff vor.
-      </div>;
+      </div>
   }
 }
 
-export default testnoresult;
+export default testnoresult

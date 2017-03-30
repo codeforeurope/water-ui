@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 
 class panel extends React.Component {
-  render() {
+  render () {
     return (
-      <div className="panel-group" id="accordion">
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h4 className="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> Woher kommt unser Trinkwasser? </a>
+      <div className='panel-group' id='accordion'>
+        <div className='panel panel-default'>
+          <div className='panel-heading'>
+            <h4 className='panel-title'>
+              <a data-toggle='collapse' data-parent='#accordion' href='#collapseOne'> Woher kommt unser Trinkwasser? </a>
             </h4>
           </div>
-          <div id="collapseOne" className="panel-collapse collapse">
-            <div className="panel-body">
+          <div id='collapseOne' className='panel-collapse collapse'>
+            <div className='panel-body'>
               <p>Im Stadtkreis gibt es etwa 40 Quellen und Brunnen, im Landkreis sind es etwa 130.</p>
               <p>Da das Heilbronner Wasser aber sehr hart und stark mit giftigem Nitrat belastet ist, kauft die Stadt seit 43 Jahren Wasser vom
                 Bodensee (Zweckverband Bodensee-Wasserversorgung).</p>
@@ -20,14 +20,14 @@ class panel extends React.Component {
             </div>
           </div>
         </div>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h4 className="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> Warum verzichten manche Kommunen auf die Beimischung von Bodenseewasser? </a>
+        <div className='panel panel-default'>
+          <div className='panel-heading'>
+            <h4 className='panel-title'>
+              <a data-toggle='collapse' data-parent='#accordion' href='#collapseTwo'> Warum verzichten manche Kommunen auf die Beimischung von Bodenseewasser? </a>
             </h4>
           </div>
-          <div id="collapseTwo" className="panel-collapse collapse">
-            <div className="panel-body">
+          <div id='collapseTwo' className='panel-collapse collapse'>
+            <div className='panel-body'>
               <p>Günstiger ist es für die Kommunen, wenn sie ihr Trinkwasser ausschließlich aus eigenen Quellen beziehen.</p>
               <p>Die Gemeinde Jagsthausen beispielsweise versorgt ihre Einwohner zu 100 Prozent mit Eigenwasser.</p>
               <blockquote>
@@ -40,15 +40,15 @@ class panel extends React.Component {
             </div>
           </div>
         </div>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h4 className="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> Warum schmeckt mein Trinkwasser nicht so gut wie
+        <div className='panel panel-default'>
+          <div className='panel-heading'>
+            <h4 className='panel-title'>
+              <a data-toggle='collapse' data-parent='#accordion' href='#collapseThree'> Warum schmeckt mein Trinkwasser nicht so gut wie
                 Mineralwasser? </a>
             </h4>
           </div>
-          <div id="collapseThree" className="panel-collapse collapse">
-            <div className="panel-body">
+          <div id='collapseThree' className='panel-collapse collapse'>
+            <div className='panel-body'>
               <p>Der Geschmack von Wasser wird durch die in ihm enthaltenen Mineralien bestimmt.</p>
               <p>Wasser mit viel Natrium und Kalium, wird als salziger im Geschmack empfunden. Natriumarmes Wasser - wie das Heilbronner
                 Trinkwasser - hingegen schmeckt milder.</p>
@@ -57,14 +57,14 @@ class panel extends React.Component {
             </div>
           </div>
         </div>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h4 className="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"> Was bedeutet die Wasserhärte für mich?</a>
+        <div className='panel panel-default'>
+          <div className='panel-heading'>
+            <h4 className='panel-title'>
+              <a data-toggle='collapse' data-parent='#accordion' href='#collapseFour'> Was bedeutet die Wasserhärte für mich?</a>
             </h4>
           </div>
-          <div id="collapseFour" className="panel-collapse collapse">
-            <div className="panel-body">
+          <div id='collapseFour' className='panel-collapse collapse'>
+            <div className='panel-body'>
               <p>Überall dort, wo hartes Wasser langsam fließt oder auf über 60 Grad erhitzt wird, setzt sich Kalk ab. In Küche und Bad entstehen
                 so Kalkflecken, beim Wäschewaschen ist mehr Waschmittel nötig, manche Haushaltsgeräte müssen regelmäßig entkalkt werden. Dies gilt ab
                 einem Wasserhärtegrad von 21.</p>
@@ -73,14 +73,14 @@ class panel extends React.Component {
             </div>
           </div>
         </div>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h4 className="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"> Warum gibt es bei uns kein weiches Trinkwasser?</a>
+        <div className='panel panel-default'>
+          <div className='panel-heading'>
+            <h4 className='panel-title'>
+              <a data-toggle='collapse' data-parent='#accordion' href='#collapseFive'> Warum gibt es bei uns kein weiches Trinkwasser?</a>
             </h4>
           </div>
-          <div id="collapseFive" className="panel-collapse collapse">
-            <div className="panel-body">
+          <div id='collapseFive' className='panel-collapse collapse'>
+            <div className='panel-body'>
               <p>Die meisten der Heilbronner Trinkwasserbrunnen befinden sich in der Gesteinsschicht Gipskeuper, der für den sehr hohen
                 Magnesium- und Calciumgehalt im Wasser verantwortlich ist. Da diese beiden Mineralien den Härtegrad des Wassers bestimmen, gibt es in
                 Heilbronn kein weiches Wasser.</p>
@@ -89,14 +89,14 @@ class panel extends React.Component {
             </div>
           </div>
         </div>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h4 className="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix"> Wie entstehen die verschiedenen Härtegrade?</a>
+        <div className='panel panel-default'>
+          <div className='panel-heading'>
+            <h4 className='panel-title'>
+              <a data-toggle='collapse' data-parent='#accordion' href='#collapseSix'> Wie entstehen die verschiedenen Härtegrade?</a>
             </h4>
           </div>
-          <div id="collapseSix" className="panel-collapse collapse">
-            <div className="panel-body">
+          <div id='collapseSix' className='panel-collapse collapse'>
+            <div className='panel-body'>
               <p>Der Geschmack von Wasser wird durch die in ihm enthaltenen Mineralien bestimmt.</p>
               <p>Trinkwasser enthält verschiedene Mengen der Mineralstoffe Calcium und Magnesium - je nachdem ob es sich um Oberflächen-, Grund
                 oder Quellwasser handelt.</p>
@@ -104,14 +104,14 @@ class panel extends React.Component {
             </div>
           </div>
         </div>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h4 className="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven"> Einheit °dH - “Grad deutscher Härte”?</a>
+        <div className='panel panel-default'>
+          <div className='panel-heading'>
+            <h4 className='panel-title'>
+              <a data-toggle='collapse' data-parent='#accordion' href='#collapseSeven'> Einheit °dH - “Grad deutscher Härte”?</a>
             </h4>
           </div>
-          <div id="collapseSeven" className="panel-collapse collapse">
-            <div className="panel-body">
+          <div id='collapseSeven' className='panel-collapse collapse'>
+            <div className='panel-body'>
               <p>Die Einheit °dH (Grad deutscher Härte) ist veraltet, aber in der Praxis nach wie vor gebräuchlich. Neben °dH wird Millimol pro Liter (mmol/l) verwendet.</p>
               <p>Bereiche:</p>
               <ul>
@@ -122,32 +122,32 @@ class panel extends React.Component {
             </div>
           </div>
         </div>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h4 className="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight"> Weiterführende Links</a>
+        <div className='panel panel-default'>
+          <div className='panel-heading'>
+            <h4 className='panel-title'>
+              <a data-toggle='collapse' data-parent='#accordion' href='#collapseEight'> Weiterführende Links</a>
             </h4>
           </div>
-          <div id="collapseEight" className="panel-collapse collapse">
-            <div className="panel-body">
+          <div id='collapseEight' className='panel-collapse collapse'>
+            <div className='panel-body'>
               <ul>
-                <li><a href="http://www.stimme.de/3047311">Heilbronner Wasser: Reich an Mineralien (Stimme.de, 22.03.2014)</a>
-                </li><li><a href="http://www.gesetze-im-internet.de/bundesrecht/trinkwv_2001/gesamt.pdf">Trinkwasserverordnung</a></li>
-                <li><a href="http://www.mlr.baden-wuerttemberg.de/mlr/allgemein/Liste%20d%20Untersuchungsstellen-Trinkw.pdf">Liste an Laboren zur Untersuchung der Trinkwasserqualität</a></li> 
-                <li><a href="http://www.umweltbundesamt.de/sites/default/files/medien/378/publikationen/rund_um_das_trinkwasser.pdf">Broschüre des Umweltbundesamts “Rund um das Trinkwasser”</a></li>
-                <li><a href="https://www.stadtwerke-heilbronn.de/index/hsw/hsw_wasser.html">Stadtwerke Heilbronn, Rubrik Wasser</a></li>
+                <li><a href='http://www.stimme.de/3047311'>Heilbronner Wasser: Reich an Mineralien (Stimme.de, 22.03.2014)</a>
+                </li><li><a href='http://www.gesetze-im-internet.de/bundesrecht/trinkwv_2001/gesamt.pdf'>Trinkwasserverordnung</a></li>
+                <li><a href='http://www.mlr.baden-wuerttemberg.de/mlr/allgemein/Liste%20d%20Untersuchungsstellen-Trinkw.pdf'>Liste an Laboren zur Untersuchung der Trinkwasserqualität</a></li>
+                <li><a href='http://www.umweltbundesamt.de/sites/default/files/medien/378/publikationen/rund_um_das_trinkwasser.pdf'>Broschüre des Umweltbundesamts “Rund um das Trinkwasser”</a></li>
+                <li><a href='https://www.stadtwerke-heilbronn.de/index/hsw/hsw_wasser.html'>Stadtwerke Heilbronn, Rubrik Wasser</a></li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h4 className="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine"> Quellen</a>
+        <div className='panel panel-default'>
+          <div className='panel-heading'>
+            <h4 className='panel-title'>
+              <a data-toggle='collapse' data-parent='#accordion' href='#collapseNine'> Quellen</a>
             </h4>
           </div>
-          <div id="collapseNine" className="panel-collapse collapse">
-            <div className="panel-body">
+          <div id='collapseNine' className='panel-collapse collapse'>
+            <div className='panel-body'>
               <ul>
                 <li>Heilbronner Versorgungs Gmbh</li>
                 <li>Deutsche Gesellschaft für Ernährung</li>
@@ -158,8 +158,8 @@ class panel extends React.Component {
           </div>
         </div>
       </div>
-      );
+    )
   }
 }
 
-export default panel;
+export default panel

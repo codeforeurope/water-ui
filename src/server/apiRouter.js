@@ -35,7 +35,6 @@ export default function () {
   })
   /* - More examples:
 
-
   */
 
   return router.routes()

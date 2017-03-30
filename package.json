@@ -5,7 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cosmo": "./node_modules/.bin/cosmos"
+    "cosmo": "./node_modules/.bin/cosmos",
+    "i18n:extract:json2pot": "rig json2pot ./messages ./lang/my-app.pot",
+    "i18n:extract:json2po": "rig json2pot -d './build/messages/json' ./lang/my-app-en.po",
+    "i18n:import": "rig po2json './' ./translations.json -p '/./lang/locale/**/*.po$/'"
   },
   "repository": {
     "type": "git",
@@ -18,25 +21,39 @@
   },
   "homepage": "https://github.com/codeforeurope/water-ui#readme",
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.0",
+    "babel-gettext-extractor": "git+https://github.com/muffinresearch/babel-gettext-extractor.git",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2017": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
+    "flag-icon-css": "^2.8.0",
+    "inline-loader": "^0.1.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.2",
+    "postcss-import": "^9.1.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.1.0",
     "react-cosmos-webpack": "^2.0.0-beta.10",
+    "react-intl": "^2.2.3",
+    "react-intl-gettext": "^1.3.8",
+    "react-svg-loader": "^1.1.1",
     "style-loader": "^0.16.1",
+    "transifex-loader": "^3.3.0",
+    "ttf-base64-loader": "^1.0.0",
     "webpack": "^2.3.2"
   },
   "dependencies": {
-    "Flags-in-CSS": "git+https://github.com/pattle/Flags-in-CSS.git",
-    "flag-icon-css": "^2.8.0",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.8",
     "react-dom": "^15.4.2",
-    "react-flag-icon-css": "^1.0.11"
+    "react-flag-icon-css": "^1.0.11",
+    "react-intl-po": "^2.0.2",
+    "react-svg": "^2.1.19",
+    "transifex-client": "0.0.1"
   }
 }

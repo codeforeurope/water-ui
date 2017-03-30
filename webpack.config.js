@@ -1,10 +1,7 @@
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var webpack = require('webpack')
-var postCssImport = require('postcss-import')
-var postCssNested = require('postcss-nested')
-var postCssSimpleVars = require('postcss-simple-vars')
-var postCssAutoprefixer = require('autoprefixer')
+
 process.traceDeprecation = true
 // TODO https://www.npmjs.com/package/transifex-loader
 
@@ -75,15 +72,6 @@ module.exports = {
         exclude: [
           /node_modules/, /\.base\.css$/
         ],
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style',
-          use: [
-            'css?sourceMap&&modules&&importLoaders=1&localIdentName=[name]---[local]---[hash:' +
-                'base64:5]',
-            'postcss'
-          ]
-        })
-        /*
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: {
@@ -94,33 +82,14 @@ module.exports = {
           },
           publicPath: '../'
         })
-        */
       }, {
         test: /\.png$/,
         loader: 'file-loader'
       }
     ]
   },
-  resolve: {
-    modules: [
-      'src', 'node_modules', 'web_modules'
-    ],
-    extensions: ['', '.json', '.js', '.jsx']
-  },
   devtool: 'source-map',
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: function () {
-          return {
-            defaults: [
-              postCssImport, postCssNested, postCssSimpleVars, postCssAutoprefixer
-            ],
-            base: [postCssImport, postCssNested, postCssSimpleVars, postCssAutoprefixer]
-          }
-        }
-      }
-    }),
     new ExtractTextPlugin({filename: 'css/[name].css?[hash]-[chunkhash]-[contenthash]-[name]', disable: false, allChunks: true}),
     new webpack
       .optimize

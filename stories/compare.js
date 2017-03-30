@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
 class compare extends React.Component {
-  render() {
+  render () {
     return (
-      <button type="button" className="btn btn-warning switch-to-section hidden-xs" data-section="compare">
-        <span className="glyphicon glyphicon-chevron-right" /> Vergleich mit Mineralwasser
+      <button type='button' className='btn btn-warning switch-to-section hidden-xs' data-section='compare'>
+        <span className='glyphicon glyphicon-chevron-right' /> Vergleich mit Mineralwasser
       </button>
-      );
+    )
   }
 }
 
-export default compare;
+export default compare

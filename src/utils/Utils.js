@@ -103,3 +103,15 @@ export default class Utils {
     return Transmit.createContainer(Component, { initialVariables: {}, fragments })
   }
 }
+
+export function tpl (strings, ...values) {
+  const defaultMessage = strings.reduce((message, part, i) => {
+    return message + part + (values[i] ? `${i}` : '')
+  }, '')
+
+  return {
+    id: defaultMessage,
+    defaultMessage,
+    values
+  }
+}

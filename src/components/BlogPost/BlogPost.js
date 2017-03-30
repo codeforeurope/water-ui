@@ -1,11 +1,11 @@
 import React from 'react'
 import InlineCss from 'react-inline-css'
 
-class BlogPost extends React.Component {
+export default class BlogPost extends React.Component {
   static propTypes = {
     post: React.PropTypes.object.isRequired,
     comments: React.PropTypes.array.isRequired
-  }
+  };
 
   componentWillMount () {
     // run on Server & Client.
@@ -46,4 +46,3 @@ class BlogPost extends React.Component {
   }
 }
 
-export default BlogPost

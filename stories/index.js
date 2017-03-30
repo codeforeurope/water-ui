@@ -3,8 +3,8 @@ import { storiesOf, action, linkTo } from '@kadira/storybook'
 // import { configure, setAddon } from '@kadira/storybook';
 // import infoAddon from '@kadira/react-storybook-addon-info';
 // .addWithHOC(
-// 
-// 
+//
+//
 import Button from './Button'
 import Welcome from './Welcome'
 import BlogPost from '../src/components/BlogPost/BlogPost'
@@ -21,13 +21,11 @@ import selectlocation from './components/selectlocation'
 // TODO AUTO IMPORT AND AUTO add to storiesOf based on file in directory
 import Body from './components/Body.js'
 
-
 // import withState from 'recompose/withState';
-
 
 storiesOf('Body', module)
   .add('Test ', () => (
-    <Body/>
+    <Body />
   ))
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -68,7 +66,7 @@ storiesOf('locationregion', module)
   ))
 storiesOf('location', module)
   .add('basic', () => (
-    <location> location </location> 
+    <location> location </location>
   ))
 
 storiesOf('ModalFade', module)
@@ -82,12 +80,12 @@ storiesOf('selectdistrict', module)
 storiesOf('selectlocation', module)
   .add('basic', () => (
     <selectlocation> selectlocation </selectlocation>
-  )) 
+  ))
 storiesOf('selectstreet', module)
   .add('basic', () => (
     <selectstreet> selectstreet </selectstreet>
-  ))  
+  ))
 storiesOf('testtype', module)
   .add('basic', () => (
     <testtype asd='s' > testtype </testtype>
-  )) 
+  ))

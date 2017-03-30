@@ -1,0 +1,12 @@
+{
+  "presets": ["es2017"],
+  "plugins": [
+  [ "babel-gettext-extractor", {
+    "headers": <Object>,
+    "functionNames": <Object>,
+    "fileName": <String>,
+    "baseDirectory": <String>,
+    "stripTemplateLiteralIndent": <Boolean>
+  }]
+]
+}

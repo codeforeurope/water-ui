@@ -1,12 +1,17 @@
 import React from 'react'
-import {Link} from 'react-router'
-import {Navbar, Nav, MenuItem, NavItem, NavDropdown} from 'react-bootstrap'
+// import {Link} from 'react-router'
+import {Navbar, Nav, Link, MenuItem, NavItem, NavDropdown} from 'react-bootstrap'
+import {message} from 'react-intl';
+import {makeFormattedMessage as _} from '../_/_';
+
+
 import {Msg} from './messages'
 import css from './AppNavBar.css'
 
 export default class AppNavBar extends React.Component {
   render () {
     return (
+      <p>_(message`Hello, {${this.props.name}}`)</p>
       <Navbar inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
