@@ -1,9 +1,15 @@
 import React from 'react'
-// import {Link} from 'react-router'
-import {Navbar, Nav, Link, MenuItem, NavItem, NavDropdown} from 'react-bootstrap'
-import {message} from 'react-intl';
-import {makeFormattedMessage as _} from '../_/_';
+import {Link} from 'react-bootstrap-router'
 
+import {
+  Navbar,
+  Nav,
+  MenuItem,
+  NavItem,
+  NavDropdown
+} from 'react-bootstrap'
+import {message} from 'react-intl'
+import {makeFormattedMessage as _} from '../_/_'
 
 import {Msg} from './messages'
 import css from './AppNavBar.css'
@@ -11,8 +17,8 @@ import css from './AppNavBar.css'
 export default class AppNavBar extends React.Component {
   render () {
     return (
-      <p>_(message`Hello, {${this.props.name}}`)</p>
       <Navbar inverse collapseOnSelect>
+        <p>_(message`Hello, {this.props.name}`)</p>
         <Navbar.Header>
           <Navbar.Brand>
             <a href='#'>Location</a>
@@ -21,9 +27,9 @@ export default class AppNavBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="#">Country</NavItem>
-            <NavItem eventKey={2} href="#">Link</NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+            <NavItem eventKey={1} href='#'>Country</NavItem>
+            <NavItem eventKey={2} href='#'>Link</NavItem>
+            <NavDropdown eventKey={3} title='Dropdown' id='basic-nav-dropdown'>
               <MenuItem eventKey={3.1}>Action</MenuItem>
               <MenuItem eventKey={3.2}>Another action</MenuItem>
               <MenuItem eventKey={3.3}>Something else here</MenuItem>

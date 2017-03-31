@@ -25,6 +25,10 @@ npm run cosmo
 ```
 # Issues
 
+## Translate to json TODO
+- po2json -i lang/locale/en/LC_MESSAGES/messages.po -o translations.json -t lang/locale/templates/LC_MESSAGES/messages.pot --errorlevel traceback
+
+
 Please report any issues at the [Transparent-Water](https://github.com/codeforeurope/Transparent-Water/issues) repository.
 You can reference issues in commits using: 
 ```

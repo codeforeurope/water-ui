@@ -1,6 +1,6 @@
 import React from 'react'
 import InlineCss from 'react-inline-css'
-import { Msg } from './messages'
+import { Msg } from './message'
 import ReactDOM from 'react-dom'
 
 class TimelineEvent extends React.Component {
@@ -149,7 +149,7 @@ class TimelineGraph extends React.Component {
   }
 }
 
-class Timeline extends React.Component {
+export default class Timeline extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -184,8 +184,10 @@ class Timeline extends React.Component {
     )
   }
 }
+/*
 
 ReactDOM.render(
   <Timeline />,
     document.getElementById('container')
 )
+*/

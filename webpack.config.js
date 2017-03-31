@@ -1,12 +1,16 @@
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var webpack = require('webpack')
+var LoaderOptionsPlugin = require
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var autoprefixer = require('autoprefixer')
 
 process.traceDeprecation = true
 // TODO https://www.npmjs.com/package/transifex-loader
 
 module.exports = {
   entry: {
+    'src/index': './index.js',
     'desktop/index': './js/desktop/index.js',
     'desktop/post': './js/desktop/post.js',
     'desktop/vendor': ['jquery'],
@@ -23,7 +27,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.woff$/i,
+        test: /\.woff2?$/i,
         loader: 'file-loader'
       }, {
         test: /\.eot$/i,
@@ -72,10 +76,10 @@ module.exports = {
         exclude: [
           /node_modules/, /\.base\.css$/
         ],
-        use: ExtractTextPlugin.extract({
+        loader: ExtractTextPlugin.extract({ // use
           fallback: 'style-loader',
-          use: {
-            loader: 'css-loader',
+          loader: {
+            loader: 'css-loader', // use
             options: {
               sourceMap: true
             }
@@ -90,6 +94,39 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+      options: {
+        context: __dirname
+      }
+    }),
+    /**
+       * Plugin LoaderOptionsPlugin (experimental)
+       *
+       * See: https://gist.github.com/sokra/27b24881210b56bbaff7
+       */
+    /*
+    new LoaderOptionsPlugin({
+      debug: true,
+      options: {
+        context: __dirname, // helpers.root(),
+        output: {
+          path: './build'
+        }, // This has to be './' and not your output folder. // helpers.root('dist')
+        postcss: [autoprefixer],
+        sassLoader: {
+          includePaths: [path.resolve(__dirname, 'src', 'css')]
+        },
+        tslint: { // https://github.com/wbuchwalter/tslint-loader
+          emitErrors: false,
+          failOnHint: false,
+          resourcePath: 'src'
+        }
+      }
+    }),
+       */
+    new HtmlWebpackPlugin(),
     new ExtractTextPlugin({filename: 'css/[name].css?[hash]-[chunkhash]-[contenthash]-[name]', disable: false, allChunks: true}),
     new webpack
       .optimize

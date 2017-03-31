@@ -2,6 +2,11 @@ import React from 'react'
 
 import ReactDOM from 'react-dom'
 import FlagIconFactory from 'react-flag-icon-css'
+
+import selectdistrict from './selectdistrict'
+import selectstreet from './selectstreet'
+import selectlocation from './selectlocation'
+
 const FlagIcon = FlagIconFactory(React)
 // If you are not using css modules, write the following:
 // const FlagIcon = FlagIconFactory(React, { useCssModules: false })
@@ -15,10 +20,6 @@ const rootEL = document.body.querySelector('#app')
 
 const appProps = { code: 'it', size: '3x' }
 ReactDOM.render(<App {...appProps} />, rootEL)
-
-import selectdistrict from './selectdistrict'
-import selectstreet from './selectstreet'
-import selectlocation from './selectlocation'
 
 class location extends React.Component {
   render () {
