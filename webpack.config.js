@@ -1,30 +1,23 @@
-var path = require('path')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var webpack = require('webpack')
-var LoaderOptionsPlugin = require
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var autoprefixer = require('autoprefixer')
+Object.defineProperty(exports, "__esModule", {value: true});
+var _htmlWebpackPlugin = require('html-webpack-plugin');
 
-process.traceDeprecation = true
-// TODO https://www.npmjs.com/package/transifex-loader
+var _htmlWebpackPlugin2 = _interopRequireDefault(_htmlWebpackPlugin);
+
+function _interopRequireDefault (obj) {
+  return obj && obj.__esModule
+    ? obj
+    : {
+      default: obj
+    };
+}
 
 module.exports = {
-  entry: {
-    'src/index': './index.js',
-    'desktop/index': './js/desktop/index.js',
-    'desktop/post': './js/desktop/post.js',
-    'desktop/vendor': ['jquery'],
-
-    'mobile/index': './js/mobile/index.js',
-    'mobile/vendor': ['jquery']
-  },
-  output: {
-    filename: '[name].js?[hash]-[chunkhash]',
-    chunkFilename: '[name].js?[hash]-[chunkhash]',
-    path: path.join(__dirname, '/build'),
-    publicPath: '/build/'
+  devtool: 'eval',
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   module: {
+    // Using loaders instead of rules to preserve webpack 1.x compatibility
     loaders: [
       {
         test: /\.woff2?$/i,
@@ -37,118 +30,29 @@ module.exports = {
         loader: 'ttf-base64-loader',
         exclude: /node_modules/
       }, {
+        test: /\.svg$/i,
+        loader: 'file-loader'
+      }, {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
+        loader: require.resolve('babel-loader'),
         exclude: /node_modules/,
         query: {
           presets: [
             'react',
-            [
-              'es2015', {
-                'modules': false
-              }
-            ],
+            [//              'es2015' { 'modules': false},
+              'es2017'],
             'stage-0'
           ]
         }
       }, {
-        test: /\.svg$/i,
-        loader: 'inline-loader'
-        /*     test: /\.svg$/,
-        loaders: [
-          'babel-loader', {
-            loader: 'react-svg',
-            query: {
-              svgo: {
-                plugins: [
-                  {
-                    removeTitle: false
-                  }
-                ],
-                floatPrecision: 2
-              }
-            }
-          }
-        ]
-*/
-      }, {
         test: /\.css$/,
-        exclude: [
-          /node_modules/, /\.base\.css$/
-        ],
-        loader: ExtractTextPlugin.extract({ // use
-          fallback: 'style-loader',
-          loader: {
-            loader: 'css-loader', // use
-            options: {
-              sourceMap: true
-            }
-          },
-          publicPath: '../'
-        })
+        loader: require.resolve('style-loader') + '!' + require.resolve('css-loader'),
+        exclude: /node_modules/
       }, {
         test: /\.png$/,
         loader: 'file-loader'
       }
     ]
   },
-  devtool: 'source-map',
-  plugins: [
-    new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      debug: false,
-      options: {
-        context: __dirname
-      }
-    }),
-    /**
-       * Plugin LoaderOptionsPlugin (experimental)
-       *
-       * See: https://gist.github.com/sokra/27b24881210b56bbaff7
-       */
-    /*
-    new LoaderOptionsPlugin({
-      debug: true,
-      options: {
-        context: __dirname, // helpers.root(),
-        output: {
-          path: './build'
-        }, // This has to be './' and not your output folder. // helpers.root('dist')
-        postcss: [autoprefixer],
-        sassLoader: {
-          includePaths: [path.resolve(__dirname, 'src', 'css')]
-        },
-        tslint: { // https://github.com/wbuchwalter/tslint-loader
-          emitErrors: false,
-          failOnHint: false,
-          resourcePath: 'src'
-        }
-      }
-    }),
-       */
-    new HtmlWebpackPlugin(),
-    new ExtractTextPlugin({filename: 'css/[name].css?[hash]-[chunkhash]-[contenthash]-[name]', disable: false, allChunks: true}),
-    new webpack
-      .optimize
-      .CommonsChunkPlugin({
-        names: [
-          'desktop/common', 'desktop/vendor'
-        ],
-        chunks: [
-          'desktop/common', 'desktop/index', 'desktop/post'
-        ],
-        minChunks: 2
-      }),
-    new webpack
-      .optimize
-      .CommonsChunkPlugin({
-        names: [
-          'mobile/common', 'mobile/vendor'
-        ],
-        chunks: [
-          'mobile/common', 'mobile/index'
-        ],
-        minChunks: 2
-      })
-  ]
+  plugins: [new _htmlWebpackPlugin2.default({title: 'React Cosmos'})]
 }

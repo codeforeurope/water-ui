@@ -28,7 +28,6 @@ swagger/swagger.yaml
 *.iml
 atlassian*
 .vscode/
-components/
 npm-debug.log
 yarn.lock
 trinkwass.html

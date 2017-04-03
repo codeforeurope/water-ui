@@ -1,5 +1,8 @@
 {
-  "presets": ["es2017"]
+  "presets": [
+    "es2017",
+    "react-app"
+  ]
   /*,
   "plugins": [
   [ "babel-gettext-extractor", {

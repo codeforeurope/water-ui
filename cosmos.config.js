@@ -3,22 +3,21 @@
 
 module.exports = {
   componentPaths: [
-  // ('./src/components/'),
-  ('./components/')
+  // ('./src/components'),
+  ('./components') // NB Don't put in trailing / - it breaks the component name
   ],
   globalImports: [
-//    './src/static/css/bootstrap.css',
-//    './src/static/css/bootstrap-cyborg.css', // crashes with Module build failed: ReferenceError: document is not defined when included //TODO
+    // './src/static/css/bootstrap.css',
+    './src/static/css/bootstrap-cyborg.css',
+    // './index2_files/6a2277d1.tw.min.js',
     './src/static/css/main.css'
   ],
-  publicPath: 'src/static',
+  publicPath: './src/static',
 
   // Read more about proxies below
   proxies: [
     // './redux-proxy.js',
-    './cosmosproxy.js'
+    // './cosmosproxy.js'
   ],
-  hostname: 'localhost',
-  port: 8989,
   webpackConfigPath: './webpack.config.js'
 }
