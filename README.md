@@ -21,7 +21,7 @@ npm run storybook
 
 To Test all components in src/components
 ```shell
-npm run cosmo
+NODE_ENV=development npm run cosmo
 ```
 # Issues
 
