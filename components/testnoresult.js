@@ -1,4 +1,5 @@
 import React from 'react'
+import {Container, Row, Col} from 'styled-bootstrap-grid'
 
 class testnoresult extends React.Component {
   render () {

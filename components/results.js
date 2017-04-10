@@ -16,6 +16,7 @@ import buttoncompare from './buttoncompare'
 import mineralwaters from './mineralwaters'
 import sectionmap from './sectionmap'
 import info from './info'
+import {Container, Row, Col} from 'styled-bootstrap-grid'
 
 class results extends React.Component {
   render () {
@@ -25,11 +26,11 @@ class results extends React.Component {
         <testtype />
         <testnoresult />
         <div data-comonent='resultvalue' className='result-with-value'>
-          <div className='row'>
-            <div className='col-lg-12 col-md-12'>
+          <Row>
+            <Col lg='12' md='12'>
               <div className='section section-explanation'>
-                <div className='row gauge-glass-container' style={{}}>
-                  <div className='col-lg-6 col-md-6 col-sm-6 col-xs-7'>
+                <Row className='gauge-glass-container'>
+                  <Col lg='6' md='6' sm='6' xs='7'>
                     <mineralNa />
                     <mineralK />
                     <mineralCa />
@@ -39,17 +40,17 @@ class results extends React.Component {
                     <mineralSo4 />
                     <br />
                     <p><compare /></p>
-                  </div>
+                  </Col>
                   <gaugeglass />
-                </div>
+                </Row>
                 <resultexplanation />
                 <p><br /></p>
                 <p><buttoncompare /></p>
               </div>
               <mineralwaters />
               <sectionmap />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
         <info />
       </div>

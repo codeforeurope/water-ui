@@ -39,7 +39,7 @@ export default class PreviewComponent extends React.Component {
 // we couldn't parse the YAML, check if it's JSON
       try {
         jsonData = JSON.parse(this.props.value)
-      } catch (err) { 
+      } catch (err) {
         console.error(err)
         return
       }

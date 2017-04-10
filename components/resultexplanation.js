@@ -1,15 +1,15 @@
 import React from 'react'
 import hardnessresults from './hardnessresults'
-
+import {Container, Row, Col} from 'styled-bootstrap-grid'
 class resultexplanation extends React.Component {
   render () {
     return (
-      <div className='row gauge-bar-container' style={{}}>
-        <div className='col-lg-5 col-md-5 col-sm-12 col-xs-12'>
+      <Row className='gauge-bar-container'>
+        <Col lg='5' md='5' sm='12' xs='12'>
           <p>Die Wasserhärte gibt an, wie weich oder hart ein Wasser ist. Je mehr Calcium und Magnesium in einem Wasser enthalten sind, desto härter ist es.</p>
           <p>Hartes Wasser kann in Küche und Bad Kalkflecken verursachen. Wegen seinem hohen Calcium- und Magnesiumgehalt ist es gesünder als weiches Wasser.<br />(Calcium: Aufbau von Knochen und Zähnen, Magnesium: Aufbau von Muskeln und Nerven)</p>
-        </div>
-        <div className='col-lg-7 col-md-7 col-sm-12 col-xs-12'>
+        </Col>
+        <Col lg='7' md='7' sm='12' xs='12'>
           <div style={{
             paddingRight: 34
           }}>
@@ -33,8 +33,8 @@ class resultexplanation extends React.Component {
               </g>
             </svg>
           </div>
-        </div>
-      </div>
+        </Col>
+      </Row>
     )
   }
 }

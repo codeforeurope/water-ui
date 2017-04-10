@@ -1,10 +1,11 @@
 import React from 'react'
+import {Container, Row, Col} from 'styled-bootstrap-grid'
 
 class gauge extends React.Component {
   render () {
     return (
-      <div className='col-lg-4 col-md-4 col-sm-6 col-xs-6'>
-        	<svg className='bottle-img pull-right' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 258 837' preserveAspectRatio='xMinYMin meet'>
+      <Col lg='4' md='4' sm='6' xs='6'>
+        <svg className='bottle-img pull-right' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 258 837' preserveAspectRatio='xMinYMin meet'>
           <text className='gauge-unit' x='78' y='220' textAnchor='left'>°dH</text>
 
           <g className='gauge-values'>
@@ -53,7 +54,7 @@ class gauge extends React.Component {
 														c0-8.204-6.654-14.856-14.86-14.856C140.715,57.906,134.057,64.557,134.057,72.761z' />
           </g>
         </svg>
-      </div>
+      </Col>
     )
   }
 }

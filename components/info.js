@@ -1,12 +1,13 @@
 import React from 'react'
 import panel from './panel'
+import {Container, Row, Col} from 'styled-bootstrap-grid'
 
 class info extends React.Component {
   render () {
     return (
       <div className='info-container'>
-        <div className='row'>
-          <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+        <Row>
+          <Col lg='6' md='6' sm='12' xs='12'>
             <div className='panel panel-default'>
               <div className='panel-heading'>
                 <h4 className='panel-title'>Information zu <span className='zone-id' /></h4>
@@ -21,8 +22,8 @@ class info extends React.Component {
               </div>
             </div>
             <panel />
-          </div>
-        </div>
+          </Col>
+        </Row>
       </div>
     )
   }

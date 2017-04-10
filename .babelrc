@@ -1,7 +1,6 @@
 {
   "presets": [
-    "es2017",
-    "react-app"
+   "es2017"
   ]
   /*,
   "plugins": [

@@ -1,10 +1,11 @@
 import React from 'react'
 import resultdata from './resultdata'
+import {Container, Row, Col} from 'styled-bootstrap-grid'
 
 class gaugeglass extends React.Component {
   render () {
     return (
-      <div className='col-lg-6 col-md-6 col-sm-6 col-xs-5'>
+      <Col lg='6' md='6' sm='6' xs='5'>
 
         <svg className='gauge-glass-img pull-right' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 186 837' preserveAspectRatio='xMinYMin meet'>
           <text className='gauge-unit' x='78' y='175' textAnchor='left'>mg/l</text>
@@ -56,7 +57,7 @@ class gaugeglass extends React.Component {
         </svg>
 
         <resultdata />
-      </div>
+      </Col>
     )
   }
 }

@@ -1,19 +1,32 @@
-Object.defineProperty(exports, "__esModule", {value: true});
-var _htmlWebpackPlugin = require('html-webpack-plugin');
+Object.defineProperty(exports, '__esModule', {value: true})
+var _htmlWebpackPlugin = require('html-webpack-plugin')
+var path = require('path')
 
-var _htmlWebpackPlugin2 = _interopRequireDefault(_htmlWebpackPlugin);
+var _htmlWebpackPlugin2 = _interopRequireDefault(_htmlWebpackPlugin)
 
 function _interopRequireDefault (obj) {
   return obj && obj.__esModule
     ? obj
     : {
       default: obj
-    };
+    }
 }
 
 module.exports = {
   devtool: 'eval',
   resolve: {
+    alias: {
+ //     'es2017':path.resolve(__dirname, './node_modules/babel-preset-es2017')
+/*      
+      'react-grid-layout': path.resolve(__dirname, '../react-grid-layout/'),
+      'react-cosmos': path.resolve(__dirname, '../react-cosmos/packages/react-cosmos'),
+      'react-cosmos-voyager': path.resolve(__dirname, '../react-cosmos/packages/react-cosmos-voyager'),
+      'react-cosmos-webpack': path.resolve(__dirname, '../react-cosmos/packages/react-cosmos-webpack'),
+      'react-cosmos-utils': path.resolve(__dirname, '../react-cosmos/packages/react-cosmos-utils'),
+      'react-cosmos-config': path.resolve(__dirname, '../react-cosmos/packages/react-cosmos-config')
+
+*/
+    },
     extensions: ['.js', '.jsx']
   },
   module: {
@@ -39,9 +52,12 @@ module.exports = {
         query: {
           presets: [
             'react',
-            [//              'es2015' { 'modules': false},
-              'es2017'],
-            'stage-0'
+            [
+              'es2015'
+            //  'es2015'[{'modules': false}]
+            //  'es2017'
+            ],
+            // 'stage-0'
           ]
         }
       }, {

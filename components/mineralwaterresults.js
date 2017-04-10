@@ -1,9 +1,9 @@
 import React from 'react'
-
+import {Container, Row, Col} from 'styled-bootstrap-grid'
 class mineralwaterresults extends React.Component {
   render () {
     return (
-      <div className='col-lg-5 col-md-5 col-sm-6 col-xs-6'>
+      <Col lg='5' md='5' sm='6' xs='6'>
         <div className='gauge-description gauge-glass-description' style={{
           marginTop: 38
         }}>
@@ -54,7 +54,7 @@ class mineralwaterresults extends React.Component {
             <p>Sulfate wirken verdauungsfördernd, ab einem Gehalt von 1200 mg/l sogar abführend.</p>
           </div>
         </div>
-      </div>
+      </Col>
     )
   }
 }

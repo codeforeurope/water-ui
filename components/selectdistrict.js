@@ -1,13 +1,14 @@
 import React from 'react'
+import {Container, Row, Col} from 'styled-bootstrap-grid'
 
 class selectdistrict extends React.Component {
   render () {
     return (
       <div className='form-group select-district' style={{}}>
         <label htmlFor='district' className='col-sm-2 control-label'>Ortsteil</label>
-        <div className='col-sm-10'>
+        <Col sm='10'>
           <select id='district' className='district form-control' />
-        </div>
+        </Col>
       </div>
     )
   }
