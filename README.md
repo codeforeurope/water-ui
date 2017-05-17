@@ -1,3 +1,6 @@
+# Prerequisits
+* [node](https://nodejs.org/en/)
+* [yarn](https://yarnpkg.com/lang/en/docs/install/)
 
 https://github.com/codeforireland2/swagger-mongoose-react-firebase as base
 
